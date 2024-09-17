@@ -13,7 +13,7 @@ type OpenAIAdapter struct {
 	APIKey string
 }
 
-func CreateRequest(prompt string) openai.CompletionRequest {
+func CreateRequest(promptPrefix string, prompt string) openai.CompletionRequest {
 	return openai.CompletionRequest{
 		Model:       openai.GPT3Dot5TurboInstruct,
 		MaxTokens:   1024,
